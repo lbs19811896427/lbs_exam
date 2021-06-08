@@ -3,7 +3,7 @@ create table if not exists ods_club(
   club_name string comment '俱乐部名称',
   club_address string comment '俱乐部地址',
   club_other string comment '其他'
-)location '/ods/ods_club/'; 
+); 
 
 
 create table if not exists ods_Player(
@@ -11,14 +11,14 @@ create table if not exists ods_Player(
   Player_name string comment '棋手名字'，
   Player_address string comment '棋手地址',
   Player_other string comment '其他'
-)location '/ods/ods_Player/'；
+)；
 
 
 create table if not exists ods_Members(
   Member_id string comment '会员id',
   Member_name string comment '会员名称',
   Player_id string comment '棋手id'
-)location '/ods/ods_Members/'; 
+); 
 
 
 create table if not exists ods_Tournaments(
@@ -27,27 +27,27 @@ create table if not exists ods_Tournaments(
   Sponsor string comment '赞助商',
   start_time string comment '开始时间',
   end_time string comment '结束时间'
-)location '/ods/ods_Tournaments/'; 
+); 
 
 create table if not exists ods_Sponsor(
   Tournament_id string comment '锦标赛id',
   Sponsor_id string comment '赞助商id',
   APlayers_id string comment '棋手id1',
   BPlayers_id string comment '棋手id2'
-)location '/ods/ods_Sponsor/'; 
+); 
 
 
 create table if not exists ods_Organization(
   Sponsor_id string comment '赞助商id',
   Sponsor_name string comment '赞助商名称',
   Sponsor_type string comment '赞助商类型' 
-)location '/ods/ods_Organization/'; 
+); 
 
 create table if not exists ods_play_tournament(
   Player_id string comment '棋手id',
   Tournament_id string comment '锦标赛id',
   create_time string comment '比赛创建时间' 
-)location '/ods/ods_play_tournament/';
+);
 
 create table if not exists ods_Match(
   match_id string comment '比赛id',
@@ -56,7 +56,7 @@ create table if not exists ods_Match(
   BPlayers_id string comment '棋手id'，
   start_time string comment '开始时间',
   end_time string comment '结束时间'
-)location '/ods/ods_Match/'; 
+); 
 
 
 
@@ -66,4 +66,4 @@ create table if not exists dws_rank(
   wins string comment '嬴的场次',
   losts string comment '输的场次',
   rank string comment '比赛场次'
-)location '/dws/dws_rank/';
+);
