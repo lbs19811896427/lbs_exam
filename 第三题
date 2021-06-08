@@ -1,4 +1,4 @@
-create clubs table if not exists Chess(
+create table if not exists clubs(
   clubs_id string comment '俱乐部id',
   clubs_name string comment '俱乐部名称',
   clubs_address string comment '俱乐部地址',
@@ -7,7 +7,7 @@ create clubs table if not exists Chess(
 row format delimited fields terminated by ','; 
 
 
-create Players table if not exists Chess(
+create table if not exists Players(
   Players_id string comment '棋手id',
   Players_name string comment '棋手名字',
   Players_rank string comment '棋手排名',
@@ -17,7 +17,7 @@ create Players table if not exists Chess(
 row format delimited fields terminated by ','; 
 
 
-create Members table if not exists Chess(
+create table if not exists Members(
   Members_id string comment '会员id',
   Members_name string comment '会员名称',
   Players_id string comment '棋手id'
@@ -25,7 +25,7 @@ create Members table if not exists Chess(
 row format delimited fields terminated by ','; 
 
 
-create Tournaments table if not exists Chess(
+create table if not exists Tournaments(
   Tournaments_id string comment '锦标赛id',
   Tournaments_name string comment '锦标赛名称',
   Tournaments_address string comment '俱乐部地址'
@@ -36,7 +36,7 @@ create Tournaments table if not exists Chess(
 )
 row format delimited fields terminated by ','; 
 
-create Matches table if not exists Chess(
+create table if not exists Matches(
   Matches_id string comment '比赛id',
   Matches_name string comment '俱乐部名称',
   Players_id string comment '棋手id1',
@@ -45,7 +45,7 @@ create Matches table if not exists Chess(
 row format delimited fields terminated by ','; 
 
 
-create Sponsor table if not exists Chess(
+create table if not exists Sponsor(
   Sponsor_id string comment '赞助商id',
   Sponsor_name string comment '赞助商名称',
   Sponsor_type string comment '赞助商类型'
